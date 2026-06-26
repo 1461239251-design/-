@@ -58,13 +58,6 @@ const covers = [
   { title: '章鱼噼原罪', image: coverTakoP },
 ];
 
-const strengths = [
-  { title: '叙事节奏', body: '把素材重新组织成清晰的观看动线，控制信息释放、情绪停顿和高潮落点。' },
-  { title: '广告表达', body: '熟悉 TVC、短视频和品牌片的节奏密度，在有限时长内突出产品记忆点。' },
-  { title: '音画关系', body: '重视音乐、音效、转场和画面动作的咬合，让剪辑点服务观看情绪。' },
-  { title: '视觉包装', body: '具备封面、字幕、调色与基础动效意识，让作品从内容到呈现保持统一。' },
-];
-
 /* ---------- Image Lightbox ---------- */
 function ImageLightbox({ src, alt, onClose }) {
   const [imgError, setImgError] = useState(false);
@@ -231,7 +224,6 @@ const sectionTitles = {
   experience: 'EXPERIENCE',
   projects: 'FEATURED WORKS',
   covers: 'VIDEO COVERS',
-  strengths: 'STRENGTHS',
   contact: 'GET IN TOUCH',
 };
 
@@ -274,7 +266,6 @@ function App() {
             <a href="#experience">经历</a>
             <a href="#projects">项目</a>
             <a href="#covers">封面</a>
-            <a href="#strengths">优势</a>
             <a href="#contact">联系</a>
           </div>
           <a className="navCta" href="mailto:1461239251@qq.com">联系我</a>
@@ -451,31 +442,11 @@ function App() {
         </div>
       </section>
 
-      {/* ==================== STRENGTHS ==================== */}
-      <section className="section strengths shell" id="strengths">
-        <div className="sectionHeader">
-          <span className="sectionTitleEn">{sectionTitles.strengths}</span>
-          <span className="sectionNo">04</span>
-          <h2>个人优势</h2>
-          <p>面向剪辑岗位，把审美、执行和沟通落到可交付的作品上。</p>
-        </div>
-
-        <div className="strengthGrid anim-stagger">
-          {strengths.map((item, index) => (
-            <article className="strengthCard glass" key={item.title}>
-              <span className="strengthNo">{String(index + 1).padStart(2, '0')}</span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       {/* ==================== CONTACT ==================== */}
       <section className="contactFinal" id="contact">
         <div className="contactShell shell">
           <span className="sectionTitleEn">{sectionTitles.contact}</span>
-          <span className="sectionNo">05</span>
+          <span className="sectionNo">04</span>
           <h2>让下一条片子，有更准确的呼吸。</h2>
           <p>欢迎联系我获取完整作品集、视频源文件或进一步沟通剪辑合作。</p>
           <div className="finalContacts anim-stagger">
@@ -488,6 +459,12 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* ==================== FOOTER ==================== */}
+      <footer className="siteFooter">
+        <p className="footerMotto">无限进步</p>
+        <p className="footerCredit">本站由Claude Code制作</p>
+      </footer>
 
       {/* ==================== LIGHTBOXES ==================== */}
       {imgLightbox && (
