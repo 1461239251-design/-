@@ -778,13 +778,31 @@ main {
 }
 
 .sectionHint {
-  display: block;
-  max-width: 440px;
-  margin: 0 0 0 auto;
-  color: rgba(29, 29, 31, 0.3);
-  font-size: 12px;
+  display: inline;
+  margin-left: 16px;
+  padding: 3px 10px;
+  color: rgba(29, 29, 31, 0.55);
+  font-size: 13px;
   font-weight: 400;
-  text-align: right;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  background: rgba(29, 29, 31, 0.05);
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.projectQualityNote {
+  width: 100%;
+  margin: 16px 0 8px 0;
+  padding: 10px 20px;
+  color: rgba(29, 29, 31, 0.5);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-align: center;
+  background: rgba(29, 29, 31, 0.04);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
 }
 
 /* ============================================================

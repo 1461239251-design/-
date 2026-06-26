@@ -9,14 +9,14 @@ import coverBadFilm from '../封面/烂片.png';
 import coverWuthering from '../封面/鸣潮f.png';
 import ticketStamp from '../票根.png';
 import coverTakoP from '../TakoP.png';
-import videoPocari from '../导出用.mp4';
+import videoPocari from '../6月26日.mp4';
 import posterPocari from '../宝矿力水特TVC封面.jpg';
 import posterBishe from '../理想国封面.jpg';
 import posterLixiangguo from '../毕设作品预告封面.jpg';
-import videoTokyo from '../东京调色.mp4';
+import videoTokyo from '../东京调色BGM版.mp4';
 import videoLixiangguo from '../理想国.mp4';
 import videoBishe from '../毕设作品预告.mp4';
-import showreelVideo from '../6月25日.mp4';
+import showreelVideo from '../91mb.mp4';
 import showreelPoster from '../showreel封面.jpg';
 import posterTokyo from '../东京调色封面.jpg';
 
@@ -386,6 +386,8 @@ function App() {
           <p>视频作品与视觉短片，呈现剪辑节奏、叙事把控与画面表达。</p>
         </div>
 
+        <div className="projectQualityNote">为保证视频在站内正常播放，并非最高质量</div>
+
         <div className="projectGrid anim-stagger">
           {projects.map((project) => (
             <article
@@ -422,10 +424,9 @@ function App() {
         <div className="sectionHeader">
           <span className="sectionTitleEn">{sectionTitles.covers}</span>
           <span className="sectionNo">03</span>
-          <h2>视频封面</h2>
+          <h2>视频封面<span className="sectionHint">点击底部文字可跳转部分视频链接</span></h2>
           <div>
             <p>每一支视频的视觉名片——从构图、字体到氛围，封面决定了观众的第一眼。</p>
-            <span className="sectionHint">点击底部文字可跳转视频链接</span>
           </div>
         </div>
 
