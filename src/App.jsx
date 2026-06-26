@@ -9,14 +9,9 @@ import coverBadFilm from '../封面/烂片.png';
 import coverWuthering from '../封面/鸣潮f.png';
 import ticketStamp from '../票根.png';
 import coverTakoP from '../TakoP.png';
-import videoPocari from '../6月26日.mp4';
 import posterPocari from '../宝矿力水特TVC封面.jpg';
 import posterBishe from '../理想国封面.jpg';
 import posterLixiangguo from '../毕设作品预告封面.jpg';
-import videoTokyo from '../东京调色BGM版.mp4';
-import videoLixiangguo from '../理想国.mp4';
-import videoBishe from '../毕设作品预告.mp4';
-import showreelVideo from '../91mb.mp4';
 import showreelPoster from '../showreel封面.jpg';
 import posterTokyo from '../东京调色封面.jpg';
 
@@ -44,10 +39,10 @@ const stats = [
 ];
 
 const projects = [
-  { title: '宝矿力水特 TVC', type: '广告短片', tool: 'PR/剪辑', meta: '产品节奏 / 品牌调性', video: videoPocari, poster: posterPocari },
-  { title: '乌托邦（毕设预告）', type: '情绪短片', tool: 'PR/剪映', meta: '毕设作品 / 情绪表达', video: videoBishe, poster: posterLixiangguo },
-  { title: '东京调色', type: '调色作品', tool: 'DaVinci', meta: '色彩风格 / 视觉质感', video: videoTokyo, poster: posterTokyo },
-  { title: '所谓理想悖论', type: '短片视觉', tool: 'AE', meta: '叙事剪辑 / 情绪表达', video: videoLixiangguo, poster: posterBishe },
+  { title: '宝矿力水特 TVC', type: '广告短片', tool: 'PR/剪辑', meta: '产品节奏 / 品牌调性', video: 'https://www.bilibili.com/video/BV1GiJj6HEdF/', poster: posterPocari },
+  { title: '乌托邦（毕设预告）', type: '情绪短片', tool: 'PR/剪映', meta: '毕设作品 / 情绪表达', video: 'https://www.bilibili.com/video/BV1GiJj6HEdF/', poster: posterLixiangguo },
+  { title: '东京调色', type: '调色作品', tool: 'DaVinci', meta: '色彩风格 / 视觉质感', video: 'https://www.bilibili.com/video/BV1GiJj6HEdF/', poster: posterTokyo },
+  { title: '所谓理想悖论', type: '短片视觉', tool: 'AE', meta: '叙事剪辑 / 情绪表达', video: 'https://www.bilibili.com/video/BV1GiJj6HEdF/', poster: posterBishe },
 ];
 
 const covers = [
@@ -300,17 +295,12 @@ function App() {
 
           <div
             className="heroShowreel glass"
-            onClick={() => setVideoLightbox({ src: showreelVideo, poster: showreelPoster, title: 'Showreel · 作品精选' })}
+            onClick={() => setImgLightbox({ src: showreelPoster, alt: 'Showreel · 作品精选' })}
           >
-            <video
+            <img
               className="heroShowreelVideo"
-              src={showreelVideo}
-              poster={showreelPoster}
-              muted
-              loop
-              preload="metadata"
-              playsInline
-              disablePictureInPicture
+              src={showreelPoster}
+              alt="Showreel"
             />
             <div className="heroShowreelShade" />
             <div className="heroShowreelLabel">
@@ -393,16 +383,12 @@ function App() {
             <article
               className="projectCard glass featured"
               key={project.title}
-              onClick={() => setVideoLightbox({ src: project.video, poster: project.poster, title: project.title })}
+              onClick={() => { if (project.video.startsWith('http')) { window.open(project.video, '_blank'); } }}
             >
-              <video
+              <img
                 className="projectCardBg"
-                src={project.video}
-                poster={project.poster}
-                muted
-                preload="metadata"
-                playsInline
-                disablePictureInPicture
+                src={project.poster}
+                alt={project.title}
               />
               <div className="projectShade" />
               <div className="projectContent">
