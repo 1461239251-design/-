@@ -19,6 +19,8 @@ import videoBishe from '../毕设作品预告.mp4';
 import showreelVideo from '../91mb.mp4';
 import showreelPoster from '../showreel封面.jpg';
 import posterTokyo from '../东京调色封面.jpg';
+import videoLuohua from '../落花后日谈.mp4';
+import posterLuohua from '../落花后日谈封面.jpg';
 
 /* ---------- Data ---------- */
 const contacts = [
@@ -39,7 +41,7 @@ const contacts = [
 const stats = [
   { value: '16+', label: '本地作品素材' },
   { value: '2023-2026', label: '创作经历' },
-  { value: '8', label: '视频项目' },
+  { value: '9', label: '视频项目' },
   { value: '2', label: '公开平台' },
 ];
 
@@ -48,6 +50,7 @@ const projects = [
   { title: '乌托邦（毕设预告）', type: '情绪短片', tool: 'PR/剪映', meta: '毕设作品 / 情绪表达', video: videoBishe, poster: posterLixiangguo },
   { title: '东京调色', type: '调色作品', tool: 'DaVinci', meta: '色彩风格 / 视觉质感', video: videoTokyo, poster: posterTokyo },
   { title: '所谓理想悖论', type: '短片视觉', tool: 'AE', meta: '叙事剪辑 / 情绪表达', video: videoLixiangguo, poster: posterBishe },
+  { title: '落花后日谈', type: '短片视觉', tool: 'PR/剪映', meta: '叙事剪辑 / 情绪表达', video: videoLuohua, poster: posterLuohua },
 ];
 
 const covers = [
