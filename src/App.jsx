@@ -21,6 +21,8 @@ import showreelPoster from '../showreel封面.jpg';
 import posterTokyo from '../东京调色封面.jpg';
 import videoLuohua from '../落花后日谈.mp4';
 import posterLuohua from '../落花后日谈封面.jpg';
+import videoZatan from '../开场.mp4';
+import posterZatan from '../开场封面.jpg';
 
 /* ---------- Data ---------- */
 const contacts = [
@@ -41,7 +43,7 @@ const contacts = [
 const stats = [
   { value: '16+', label: '本地作品素材' },
   { value: '2023-2026', label: '创作经历' },
-  { value: '9', label: '视频项目' },
+  { value: '10', label: '视频项目' },
   { value: '2', label: '公开平台' },
 ];
 
@@ -51,6 +53,7 @@ const projects = [
   { title: '东京调色', type: '调色作品', tool: 'DaVinci', meta: '色彩风格 / 视觉质感', video: videoTokyo, poster: posterTokyo },
   { title: '所谓理想悖论', type: '短片视觉', tool: 'AE', meta: '叙事剪辑 / 情绪表达', video: videoLixiangguo, poster: posterBishe },
   { title: '落花后日谈', type: '短片视觉', tool: 'PR/剪映', meta: '叙事剪辑 / 情绪表达', video: videoLuohua, poster: posterLuohua },
+  { title: '杂谈开场', type: '开场设计', tool: 'PR/剪映', meta: '节奏钩子 / 瞬间抓睛', video: videoZatan, poster: posterZatan },
 ];
 
 const covers = [
